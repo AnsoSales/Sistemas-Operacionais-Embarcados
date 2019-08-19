@@ -1,1 +1,2 @@
-Repositório utilizado para a Matéria de Sistemas Operacionais Embarcados
+Repositório utilizado para a matéria de Sistemas Operacionais Embarcados, com resposta aos exercícios.
+
