@@ -24,6 +24,9 @@ for (( i=1; i<=$#; i+=2 ))
  done
 ```
 3. Utilizando a lógica do script anterior, descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
+```bash
+
+```
 
 4. Crie um arquivo _sites.txt_ com o seguinte conteúdo:
 
