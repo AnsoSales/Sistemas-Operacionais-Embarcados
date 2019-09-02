@@ -1,4 +1,5 @@
 #!/bin/bash
+source up.sh
 n=$1
 caminho=$PWD
 cd $caminho
