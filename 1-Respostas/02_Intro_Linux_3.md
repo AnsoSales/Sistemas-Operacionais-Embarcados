@@ -25,6 +25,14 @@ for (( i=1; i<=$#; i+=2 ))
 ```
 3. Utilizando a lógica do script anterior, descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
 ```bash
+#!/bin/bash
+for ((i = 2019; i>= 2009; i--))
+   do
+	mes=$1
+	dia=$2
+	ncal $mes $i | grep -w $dia
+	
+   done
 
 ```
 
