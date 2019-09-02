@@ -1,6 +1,4 @@
-Repositório utilizado para a matéria de Sistemas Operacionais Embarcados, com resposta aos exercícios.
+#Respostas das listas de exercícios.
 
 
-
-teste 1
 
