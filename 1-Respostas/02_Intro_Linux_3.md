@@ -56,3 +56,12 @@ done < "sites.txt"
 ```
 
 5. Faça um script chamado _up.sh_ que sobe _N_ níveis na pasta onde você estiver, usando $1 como parâmetro de entrada. Por exemplo, se você estiver em **/home/aluno/Documents** e executar **./up.sh 2**, você automaticamente vai para a pasta **/home**.
+
+```bash
+#!/bin/bash
+for ((i=1; i<= $1; i++))
+do
+cd ..
+done
+```
+
