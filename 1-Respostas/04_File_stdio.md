@@ -2,7 +2,7 @@ Para todas as questões, utilize as funções da biblioteca `stdio.h` de leitura
 
 1. Crie um código em C para escrever "Ola mundo!" em um arquivo chamado 'ola_mundo.txt'.
 ```C
-	#include<stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 
 	void main()
@@ -100,7 +100,38 @@ $ Idade: 30 anos
 ```
 
 4. Crie uma função que retorna o tamanho de um arquivo, usando o seguinte protótipo: `int tam_arq_texto(char *nome_arquivo);` Salve esta função em um arquivo separado chamado 'bib_arqs.c'. Salve o protótipo em um arquivo chamado 'bib_arqs.h'. Compile 'bib_arqs.c' para gerar o objeto 'bib_arqs.o'.
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
 
+	long int tam_arq_texto(char *nome_arquivo)
+	{
+		FILE *fp;
+		long int tamanho=0;
+		fp = fopen(nome_arquivo,"rb");
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+		fseek(fp,0,SEEK_END);
+		tamanho = ftell(fp);
+		return tamanho;
+	}
+
+int main(){
+	char *nome;
+	scanf("%s", nome);	
+	long int saize = tam_arq_texto(nome);
+	printf("%ld\n",saize);
+
+
+	return 0;
+
+
+}
+```
 5. Crie uma função que lê o conteúdo de um arquivo-texto e o guarda em uma string, usando o seguinte protótipo: `char* le_arq_texto(char *nome_arquivo);` Repare que o conteúdo do arquivo é armazenado em um vetor interno à função, e o endereço do vetor é retornado ao final. (Se você alocar este vetor dinamicamente, lembre-se de liberar a memória dele quando acabar o seu uso.) Salve esta função no mesmo arquivo da questão 4, chamado 'bib_arqs.c'. Salve o protótipo no arquivo 'bib_arqs.h'. Compile 'bib_arqs.c' novamente para gerar o objeto 'bib_arqs.o'.
 
 6. Crie um código em C que copia a funcionalidade básica do comando `cat`: escrever o conteúdo de um arquivo-texto no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'cat_falsificado':
