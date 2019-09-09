@@ -1,7 +1,26 @@
 Para todas as questões, utilize as funções da biblioteca `stdio.h` de leitura e de escrita em arquivo (`fopen()`, `fclose()`, `fwrite()`, `fread()`, dentre outras). Compile os códigos com o gcc e execute-os via terminal.
 
 1. Crie um código em C para escrever "Ola mundo!" em um arquivo chamado 'ola_mundo.txt'.
+```C
+	#include<stdio.h>
+#include<stdlib.h>
 
+	void main()
+	{
+		FILE *fp;
+		fp = fopen("arquivo.txt", "w");
+
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+
+		fprintf(fp, "ola mundo");
+		fclose(fp);
+		return 0;
+	}
+```
 2. Crie um código em C que pergunta ao usuário seu nome e sua idade, e escreve este conteúdo em um arquivo com o seu nome e extensão '.txt'. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_1':
 
 ```bash
@@ -11,6 +30,38 @@ $ Digite a sua idade: 30
 $ cat Eu.txt
 $ Nome: Eu
 $ Idade: 30 anos
+```
+
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+
+	void main()
+	{
+		char nome[20];
+		int idade;
+		printf("Digite o seu nome:\n");
+		//gets(nome);
+		scanf("%s", nome);
+		printf("Digite sua idade:\n");
+		scanf("%d", &idade);
+		FILE *fp;
+		char nova[20]="";
+		strcat(nova,nome);
+		strcat(nova,".txt");
+		fp = fopen(nova, "w");
+
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+
+		fprintf(fp,"Nome: %s\n",nome);
+		fprintf(fp,"Idade: %d\n",idade);
+		fclose(fp);
+	}
 ```
 
 3. Crie um código em C que recebe o nome do usuário e e sua idade como argumentos de entrada (usando as variáveis `argc` e `*argv[]`), e escreve este conteúdo em um arquivo com o seu nome e extensão '.txt'. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':
