@@ -47,7 +47,7 @@ $ Idade: 30 anos
 		printf("Digite sua idade:\n");
 		scanf("%d", &idade);
 		FILE *fp;
-		char nova[20]="";
+		char nova[20]="";	
 		strcat(nova,nome);
 		strcat(nova,".txt");
 		fp = fopen(nova, "w");
@@ -71,6 +71,32 @@ $ ./ola_usuario_2 Eu 30
 $ cat Eu.txt
 $ Nome: Eu
 $ Idade: 30 anos
+```
+
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+
+	int main(int argc, const char **argv)
+	{
+		FILE *fp;
+		char nova[20]="";
+		strcat(nova,argv[1]);
+		strcat(nova,".txt");
+		fp = fopen(nova, "w");
+
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+
+		fprintf(fp,"Nome: %s\n",argv[1]);
+		fprintf(fp,"Idade: %s\n",argv[2]);
+		fclose(fp);
+		return 0;
+	}
 ```
 
 4. Crie uma função que retorna o tamanho de um arquivo, usando o seguinte protótipo: `int tam_arq_texto(char *nome_arquivo);` Salve esta função em um arquivo separado chamado 'bib_arqs.c'. Salve o protótipo em um arquivo chamado 'bib_arqs.h'. Compile 'bib_arqs.c' para gerar o objeto 'bib_arqs.o'.
