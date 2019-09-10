@@ -100,7 +100,81 @@ $ Idade: 30 anos
 
 4. Crie uma função que retorna o tamanho de um arquivo, usando o seguinte protótipo: `int tam_arq_texto(char *nome_arquivo);` Salve esta função em um arquivo separado chamado 'bib_arqs.c'. Salve o protótipo em um arquivo chamado 'bib_arqs.h'. Compile 'bib_arqs.c' para gerar o objeto 'bib_arqs.o'.
 
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<string.h>
+
+long tam_arq_texto(char *nome_arquivo)
+{
+		
+	int fl;
+	char *tam=(char*)malloc(100*sizeof(char));
+	long tamanho;	
+	fl=open(nome_arquivo,O_RDWR | O_CREAT, S_IRWXU);
+
+		
+		tamanho= read(fl,tam,sizeof(char)*100);
+		close(fl);
+		free(tam);
+	
+return tamanho;
+}
+
+int main()
+{
+	char* arquivo=(char *)malloc(100*sizeof(char));
+	long tamanho;
+	printf("digite o nome do arquivo: ");
+	scanf("%s", arquivo);
+	tamanho=tam_arq_texto(arquivo);
+	printf("%ld bytes\n", tamanho);
+	free(arquivo);
+return 0;
+}
+```
+
 5. Crie uma função que lê o conteúdo de um arquivo-texto e o guarda em uma string, usando o seguinte protótipo: `char* le_arq_texto(char *nome_arquivo);` Repare que o conteúdo do arquivo é armazenado em um vetor interno à função, e o endereço do vetor é retornado ao final. (Se você alocar este vetor dinamicamente, lembre-se de liberar a memória dele quando acabar o seu uso.) Salve esta função no mesmo arquivo da questão 4, chamado 'bib_arqs.c'. Salve o protótipo no arquivo 'bib_arqs.h'. Compile 'bib_arqs.c' novamente para gerar o objeto 'bib_arqs.o'.
+
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<string.h>
+
+char *le_arq_texto(char *nome_arquivo)
+{
+		
+	int fl;
+	char *tam=(char*)malloc(100*sizeof(char));
+	char *conteudo=(char*)malloc(100*sizeof(char));
+	long tamanho;	
+	fl=open(nome_arquivo,O_RDWR | O_CREAT, S_IRWXU);
+
+		
+		read(fl,tam,sizeof(char)*100);
+		close(fl);
+		
+	
+return tam;
+free(tam);
+}
+
+int main()
+{
+	char* arquivo=(char *)malloc(100*sizeof(char));
+	long tamanho;
+	printf("digite o nome do arquivo: ");
+	scanf("%s", arquivo);
+	
+	printf("%s",le_arq_texto(arquivo));
+	free(arquivo);
+return 0;
+}
+```
 
 6. Crie um código em C que copia a funcionalidade básica do comando `cat`: escrever o conteúdo de um arquivo-texto no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'cat_falsificado':
 
@@ -110,6 +184,25 @@ $ ./cat_falsificado ola.txt
 $ Ola mundo cruel! Ola universo ingrato!
 ```
 
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<string.h>
+
+int main(int argc, const char **argv)
+{
+	int fl;
+	char* arquivo=(char *)malloc(100*sizeof(char));
+		fl=open(argv[1],O_RDWR | O_CREAT, S_IRWXU);		
+		read(fl,arquivo,sizeof(char)*100);
+		close(fl);
+	printf("%s",arquivo);
+	free(arquivo);
+return 0;
+}
+```
 7. Crie um código em C que conta a ocorrência de uma palavra-chave em um arquivo-texto, e escreve o resultado no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'busca_e_conta':
 
 ```bash
