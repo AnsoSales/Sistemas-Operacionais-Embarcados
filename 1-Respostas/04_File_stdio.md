@@ -134,6 +134,36 @@ int main(){
 ```
 5. Crie uma função que lê o conteúdo de um arquivo-texto e o guarda em uma string, usando o seguinte protótipo: `char* le_arq_texto(char *nome_arquivo);` Repare que o conteúdo do arquivo é armazenado em um vetor interno à função, e o endereço do vetor é retornado ao final. (Se você alocar este vetor dinamicamente, lembre-se de liberar a memória dele quando acabar o seu uso.) Salve esta função no mesmo arquivo da questão 4, chamado 'bib_arqs.c'. Salve o protótipo no arquivo 'bib_arqs.h'. Compile 'bib_arqs.c' novamente para gerar o objeto 'bib_arqs.o'.
 
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char *le_arq_texto(char* nome_arquivo)
+{
+		FILE *fp;
+		char *name;
+		name= (char *) malloc(100*sizeof(char));
+		fp = fopen(nome_arquivo,"rb");
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+		fread(&name[0],sizeof(double),sizeof(char),fp);
+		return name;
+		free(name);
+	}
+
+int main()
+{
+	char arquivo[100];
+	scanf("%s", arquivo);
+	printf("%s\n", le_arq_texto(arquivo));	
+	return 0;
+}
+```
+
 6. Crie um código em C que copia a funcionalidade básica do comando `cat`: escrever o conteúdo de um arquivo-texto no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'cat_falsificado':
 
 ```bash
@@ -141,7 +171,35 @@ $ echo Ola mundo cruel! Ola universo ingrato! > ola.txt
 $ ./cat_falsificado ola.txt
 $ Ola mundo cruel! Ola universo ingrato!
 ```
+```C
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
+char *cat_falsificado(char* nome_arquivo)
+{
+		FILE *fp;
+		char *name;
+		name= (char *) malloc(100*sizeof(char));
+		fp = fopen(nome_arquivo,"rb");
+		if (!fp)
+		{
+			printf("Erro na leitura do arquivo.");
+			exit(0);
+		}
+		fread(&name[0],sizeof(double),sizeof(char),fp);
+		return name;
+		free(name);
+	}
+
+int main()
+{
+	char arquivo[100];
+	scanf("%s", arquivo);
+	printf("%s\n", cat_falsificado(arquivo));	
+	return 0;
+}
+```
 7. Crie um código em C que conta a ocorrência de uma palavra-chave em um arquivo-texto, e escreve o resultado no terminal. Reaproveite as funções já criadas nas questões anteriores. Por exemplo, considerando que o código criado recebeu o nome de 'busca_e_conta':
 
 ```bash
