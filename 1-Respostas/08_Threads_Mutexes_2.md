@@ -1,5 +1,57 @@
 1. Crie um programa em C que cria uma thread, e faça com que o programa principal envie os valores 1, 2, 3, 4, 5, 6, 7, 8, 9 e 10 para a thread, com intervalos de 1 segundo entre cada envio. Depois de o programa principal enviar o número 10, ele aguarda 1 segundo e termina a execução. A thread escreve na tela cada valor recebido, e quando ela receber o valor 10, ela termina a execução.
 
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <signal.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <semaphore.h>
+
+volatile int a = 0;
+
+int count = 0;
+
+static pthread_mutex_t mutexLock;
+
+void* char_print (void* parameters)
+{
+	while(1)
+	{
+		if (count!=a)
+		{
+			pthread_mutex_lock(&mutexLock);
+			printf("%d\n",count);
+			a=count;
+			pthread_mutex_unlock(&mutexLock);
+			
+		}
+	}	
+	return NULL;
+}
+int main ()
+{
+	pthread_t thread1_id;
+	pthread_mutex_init(&mutexLock, NULL);
+	pthread_create(&thread1_id, NULL, &char_print, NULL);
+
+	for (int i = 0; i<10; i++)
+	{
+		pthread_mutex_lock(&mutexLock);
+		count++;
+		pthread_mutex_unlock(&mutexLock);
+		sleep(1);
+	}
+
+	pthread_mutex_destroy(&mutexLock);
+
+	return 0;
+}
+```
+
 2. Crie um programa em C que preenche o vetor `long int v[50000]` completamente com valores aleatórios (use a função `random()`), e que procura o valor máximo do vetor por dois métodos:
 
 (a) Pela busca completa no vetor `v[]`;
