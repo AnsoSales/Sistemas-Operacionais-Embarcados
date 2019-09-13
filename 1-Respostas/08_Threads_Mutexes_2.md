@@ -27,7 +27,6 @@ void* char_print (void* parameters)
 			printf("%d\n",count);
 			a=count;
 			pthread_mutex_unlock(&mutexLock);
-			
 		}
 	}	
 	return NULL;
