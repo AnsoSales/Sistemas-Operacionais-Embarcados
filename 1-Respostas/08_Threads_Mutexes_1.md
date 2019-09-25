@@ -22,7 +22,7 @@ int main (int argc, char** argv)
 	return 0;
 }
 ```
-
+Aqui serão criadas duas treads.
 (b)
 ```C
 void* funcao_thread_1(void *arg);
