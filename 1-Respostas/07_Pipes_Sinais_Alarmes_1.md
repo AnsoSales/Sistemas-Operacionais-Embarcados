@@ -7,7 +7,9 @@ int fd[2];
 pipe(fd);
 pid = fork();
 ```
+```
 	Aqui será criado apenas um pipe, que fará a comunicação entre pai e filho.
+```
 (b)
 ```C
 int pid;
@@ -15,8 +17,9 @@ int fd[2];
 pid = fork();
 pipe(fd);
 ```
+```
 aqui serão criados dois pipes, porém cada processo terá o seu, sendo impossibilitada a possibilidade de se comunicarem entre si.
-
+```
 2. Apresente mais cinco sinais importantes do ambiente Unix, além do `SIGSEGV`, `SIGUSR1`, `SIGUSR2`, `SIGALRM` e `SIGINT`. Quais são suas características e utilidades?
 
 3. Considere o código a seguir:
@@ -44,5 +47,6 @@ int main()
 ```
 
 Sabendo que a função `alarm()` tem como entrada a quantidade de segundos para terminar a contagem, quão precisos são os alarmes criados neste código? De onde vem a imprecisão? Este é um método confiável para desenvolver aplicações em tempo real?
-
+```
 Sei não. Tá bem precisa aqui.
+```
