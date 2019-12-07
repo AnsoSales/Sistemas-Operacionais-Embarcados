@@ -20,28 +20,8 @@ using namespace TgBot;
 #define Address 0x48
 #define A0 BASE
 
-void *bomba1 (int parameters)
-{
-	//pid_t filhote;
-		
-	//	filhote = fork();
-	//	if (filhote == 0)
-	//	{
-			
-		digitalWrite(parameters, HIGH);
-                usleep(8000000);
-                digitalWrite(parameters, LOW);
-		usleep(800);
-	//	}else
-	//	{
-	//	digitalWrite(MOTO2, HIGH);
-          //      usleep(8000000);
-           //     digitalWrite(MOTO2, LOW);
-	//	{return -1;}
-	return NULL;
-	}
-	
-	
+
+
 void sqwv(int pin, int degree, int N)
 {
 	int t1 = (100*degree+4)/9+1500;
@@ -56,19 +36,10 @@ void sqwv(int pin, int degree, int N)
 	}
 }
 
-int i2c_fd;
-void ctrl_c(int sig)
-{
-	close(i2c_fd);
-	exit(-1);
-}
-
-
 	int main (int argc, const char **argv)
 	{
-	
+
 		 FILE *fp;
-		
 		 char teste[20] = "oi";
 		 char *final;
 	        wiringPiSetup();
@@ -77,17 +48,10 @@ void ctrl_c(int sig)
 		pinMode(MOTO2, OUTPUT);
    		pinMode(SAIDA, OUTPUT);
    		 char rom[20];
-    	 
-    	
+
          string photoFilePath = "urso.jpg";
          string photoMimeType = "image/jpeg";
          //char* temp_final;
-        
-         
-
-
-
-        
 
 		TgBot::Bot bot(TOKEN);
 		bot.getEvents().onCommand("start", [&bot](TgBot::Message::Ptr message) {
@@ -95,7 +59,7 @@ void ctrl_c(int sig)
         	 });
 		bot.getEvents().onCommand("help",[&bot](TgBot::Message::Ptr message ){
 		bot.getApi().sendMessage(message->chat->id,"Segue lista de comandos;\n /info: mostra a temperatura do aquário e o ph. \n /foto: envia uma foto do seu peixe.\n /comida: alimenta seu peixe. \n /agua: troca a água do aquário.");
-		
+
 });
 		bot.getEvents().onCommand("foto",[&bot, &photoFilePath, &photoMimeType](Message::Ptr message){
 		int fd1;
@@ -182,7 +146,7 @@ void ctrl_c(int sig)
         while (true) {
        
             printf("poll started\n");
-            
+
             //message->text = temp_final;
             longPoll.start();
         }
