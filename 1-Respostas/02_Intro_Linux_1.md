@@ -25,36 +25,48 @@
 7. Apresente os respectivos comandos no terminal para:
 
   (a) Obter mais informações sobre um comando.
-  
-  	```
+   	```
 	[comando] --help
 	```
 	
   (b) Apresentar uma lista com os arquivos dentro de uma pasta.
+  
   	```
 	ls
 	```
+	
   (c) Apresentar o caminho completo da pasta.
+  
 	```
 	pwd
 	```
+	
   (d) Trocar de pasta.
+  
   	```
 	cd [caminho da pasta]
 	```
+	
   (e) Criar uma pasta.
+  
   	```
 	mkdir [nome da pasta]
 	```
+	
   (f) Apagar arquivos definitivamente.
+  
   	```
 	rm [arquivo]
 	```
+	
   (g) Apagar pastas definitivamente.
+  
   	```
 	rm -rf [pasta]
 	```
+	
   (h) Copiar arquivos.
+  
   	```
 	cp [arquivo] [destino]
 	```
@@ -62,14 +74,19 @@
   	```
 	cp -r [pasta] [destino]
 	```
+	
   (j) Mover arquivos.
+  
   	```
 	mv [arquivo] [destino]
 	```
+	
   (k) Mover pastas.
+  
   	```
 	mv -r [pasta] [destino]
 	```
+	
   (l) Renomear pastas.
   	```
 	mr [pasta] [mesmo diretório] [pasta]
