@@ -32,87 +32,87 @@
 	
   (b) Apresentar uma lista com os arquivos dentro de uma pasta.
   	```bash
-	ls
+	$ ls
 	```
 	
   (c) Apresentar o caminho completo da pasta.
 	```bash
-	pwd
+	$ pwd
 	```
 
   (d) Trocar de pasta.
   	```bash
-	cd [caminho da pasta]
+	$ cd [caminho da pasta]
 	```
 	
   (e) Criar uma pasta.
   	```bash
-	mkdir [nome da pasta]
+	$ mkdir [nome da pasta]
 	```
 	
   (f) Apagar arquivos definitivamente.
   	```bash
-	rm [arquivo]
+	$ rm [arquivo]
 	```
 	
   (g) Apagar pastas definitivamente.
   	```bash
-	rm -rf [pasta]
+	$ rm -rf [pasta]
 	```
 	
   (h) Copiar arquivos.
   	```bash
-	cp [arquivo] [destino]
+	$ cp [arquivo] [destino]
 	```
   (i) Copiar pastas.
   	```bash
-	cp -r [pasta] [destino]
+	$ cp -r [pasta] [destino]
 	```
 	
   (j) Mover arquivos.
   	```bash
-	mv [arquivo] [destino]
+	$ mv [arquivo] [destino]
 	```
 	
   (k) Mover pastas.
   
   	```bash
-	mv -r [pasta] [destino]
+	$ mv -r [pasta] [destino]
 	```
 	
   (l) Renomear pastas.
   	```bash
-	mr [pasta] [mesmo diretório] [pasta]
+	$ mr [pasta] [mesmo diretório] [pasta]
 	```
   (m) Apresentar o conteúdo de um arquivo.
   	```bash
-	cat [arquivo]
+	$ cat [arquivo]
 	```
   (n) Apresentar o tipo de um arquivo.
 	```bash
-	file [arquivo]
+	$ file [arquivo]
 	```
   (o) Limpar a tela do terminal.
   	```bash
-	clear
+	$ clear
 	```
   (p) Encontrar ocorrências de palavras-chave em um arquivo-texto.
   	```bash
-	grep [palavra-chave] [arquivo.txt]
+	$ grep [palavra-chave] [arquivo.txt]
 	```
   (q) Ordenar informações em um arquivo-texto.
   	```bash
-	sort[arquivo.txt]
+	$ sort[arquivo.txt]
 	```
   (r) Substituir ocorrências de palavras-chave em um arquivo-texto.
   	```bash
-	sed -e 's/[nome1]/nome2/' [arquivo.txt]
+	$ sed -e 's/[nome1]/nome2/' [arquivo.txt]
 	```
   (s) Conferir se dois arquivos são iguais.
   	```bash
-	diff
+	$ diff
 	```
   (t) Escrever algo na tela.
   	```bash
-	echo
+	$ echo
 	```
