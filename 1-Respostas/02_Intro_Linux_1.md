@@ -27,9 +27,9 @@
 
   (a) Obter mais informações sobre um comando.
 
-   	```bash
-    	[comando] --help
-	```
+```sh
+    [comando] --help
+```
 
   (b) Apresentar uma lista com os arquivos dentro de uma pasta.
 
@@ -111,19 +111,19 @@
 
   (o). Limpar a tela do terminal.
 
-  	```bash
+  	```sh
 	$ clear
 	```
 
   (p). Encontrar ocorrências de palavras-chave em um arquivo-texto.
 
-  	```bash
+  	```sh
 	$ grep [palavra-chave] [arquivo.txt]
 	```
 
   (q). Ordenar informações em um arquivo-texto.
 
-  	```bash
+  	```sh
 	$ sort[arquivo.txt]
 	```
 
