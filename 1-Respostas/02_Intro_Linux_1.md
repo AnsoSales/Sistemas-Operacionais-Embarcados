@@ -25,122 +25,122 @@
 
 7. Apresente os respectivos comandos no terminal para:
 
-  (a) Obter mais informações sobre um comando.
+(a) Obter mais informações sobre um comando.
 
-```sh
-    [comando] --help
+```console
+   $ [comando] --help
 ```
 
-  (b) Apresentar uma lista com os arquivos dentro de uma pasta.
+(b) Apresentar uma lista com os arquivos dentro de uma pasta.
 
-  	```bash
-    $ ls
-    ```
+```console
+$ ls
+```
 
-  (c) Apresentar o caminho completo da pasta.
+(c) Apresentar o caminho completo da pasta.
 
-	```bash
-	$ pwd
-	```
+```console
+$ pwd
+```
 
-  (d) Trocar de pasta.
+(d) Trocar de pasta.
 
-  	```bash
-	$ cd [caminho da pasta]
-	```
+```console
+$ cd [caminho da pasta]
+```
 
-  (e) Criar uma pasta.
+(e) Criar uma pasta.
 
-  	```bash
-	$ mkdir [nome da pasta]
-	```
+```console
+$ mkdir [nome da pasta]
+```
 
-  (f) Apagar arquivos definitivamente.
+(f) Apagar arquivos definitivamente.
 
-  	```bash
-	$ rm [arquivo]
-	```
+```console
+$ rm [arquivo]
+```
 
-  (g) Apagar pastas definitivamente.
+(g) Apagar pastas definitivamente.
 
-  	```bash
-	$ rm -rf [pasta]
-	```
+```console
+$ rm -rf [pasta]
+```
 
-  (h) Copiar arquivos.
+(h) Copiar arquivos.
 
-  	```bash
-	$ cp [arquivo] [destino]
-	```
+```console
+$ cp [arquivo] [destino]
+```
 
-  (i) Copiar pastas.
+(i) Copiar pastas.
 
-  	```bash
-	$ cp -r [pasta] [destino]
-	```
+```console
+$ cp -r [pasta] [destino]
+```
 
-  (j) Mover arquivos.
+(j) Mover arquivos.
 
-  	```bash
-	$ mv [arquivo] [destino]
-	```
+```console
+$ mv [arquivo] [destino]
+```
 
-  (k) Mover pastas.
+(k) Mover pastas.
 
-  	```bash
-	$ mv -r [pasta] [destino]
-	```
+```console
+$ mv -r [pasta] [destino]
+```
 
-  (l). Renomear pastas.
+(l). Renomear pastas.
 
-  	```bash
-	$ mr [pasta] [mesmo diretório] [pasta]
-	```
+```console
+$ mr [pasta] [mesmo diretório] [pasta]
+```
 
-  (m). Apresentar o conteúdo de um arquivo.
+(m). Apresentar o conteúdo de um arquivo.
 
-  	```bash
-	$ cat [arquivo]
-	```
+```console
+$ cat [arquivo]
+```
 
-  (n). Apresentar o tipo de um arquivo.
+(n). Apresentar o tipo de um arquivo.
 
-	```bash
-	$ file [arquivo]
-	```
+```console
+$ file [arquivo]
+```
 
-  (o). Limpar a tela do terminal.
+(o). Limpar a tela do terminal.
 
-  	```sh
-	$ clear
-	```
+```console
+$ clear
+```
 
-  (p). Encontrar ocorrências de palavras-chave em um arquivo-texto.
+(p). Encontrar ocorrências de palavras-chave em um arquivo-texto.
 
-  	```sh
-	$ grep [palavra-chave] [arquivo.txt]
-	```
+```console
+$ grep [palavra-chave] [arquivo.txt]
+```
 
-  (q). Ordenar informações em um arquivo-texto.
+(q). Ordenar informações em um arquivo-texto.
 
-  	```sh
-	$ sort[arquivo.txt]
-	```
+```console
+$ sort[arquivo.txt]
+```
 
-  (r). Substituir ocorrências de palavras-chave em um arquivo-texto.
+(r). Substituir ocorrências de palavras-chave em um arquivo-texto.
 
-  	```bash
-	$ sed -e 's/[nome1]/nome2/' [arquivo.txt]
-	```
+```console
+$ sed -e 's/[nome1]/nome2/' [arquivo.txt]
+```
 
-  (s). Conferir se dois arquivos são iguais.
+(s). Conferir se dois arquivos são iguais.
 
-  	```bash
-	$ diff
-	```
+```console
+$ diff
+```
 
-  (t). Escrever algo na tela.
+(t). Escrever algo na tela.
 
-  	```bash
-	$ echo
-	```
+```console
+$ echo
+```
