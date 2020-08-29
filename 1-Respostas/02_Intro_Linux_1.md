@@ -25,16 +25,17 @@
 7. Apresente os respectivos comandos no terminal para:
 
   (a) Obter mais informações sobre um comando.
+
    	```bash
-	[comando] --help
-	
+    	[comando] --help
 	```
 	
   (b) Apresentar uma lista com os arquivos dentro de uma pasta.
+  
   	```bash
-	$ ls
-	```
-	
+    $ ls
+    ```
+	   
   (c) Apresentar o caminho completo da pasta.
 	```bash
 	$ pwd
