@@ -91,55 +91,55 @@ $ mv [arquivo] [destino]
 $ mv -r [pasta] [destino]
 ```
 
-(l). Renomear pastas.
+(l) Renomear pastas.
 
 ```console
 $ mr [pasta] [mesmo diretório] [pasta]
 ```
 
-(m). Apresentar o conteúdo de um arquivo.
+(m) Apresentar o conteúdo de um arquivo.
 
 ```console
 $ cat [arquivo]
 ```
 
-(n). Apresentar o tipo de um arquivo.
+(n) Apresentar o tipo de um arquivo.
 
 ```console
 $ file [arquivo]
 ```
 
-(o). Limpar a tela do terminal.
+(o) Limpar a tela do terminal.
 
 ```console
 $ clear
 ```
 
-(p). Encontrar ocorrências de palavras-chave em um arquivo-texto.
+(p) Encontrar ocorrências de palavras-chave em um arquivo-texto.
 
 ```console
 $ grep [palavra-chave] [arquivo.txt]
 ```
 
-(q). Ordenar informações em um arquivo-texto.
+(q) Ordenar informações em um arquivo-texto.
 
 ```console
 $ sort[arquivo.txt]
 ```
 
-(r). Substituir ocorrências de palavras-chave em um arquivo-texto.
+(r) Substituir ocorrências de palavras-chave em um arquivo-texto.
 
 ```console
 $ sed -e 's/[nome1]/nome2/' [arquivo.txt]
 ```
 
-(s). Conferir se dois arquivos são iguais.
+(s) Conferir se dois arquivos são iguais.
 
 ```console
 $ diff
 ```
 
-(t). Escrever algo na tela.
+(t) Escrever algo na tela.
 
 ```console
 $ echo
