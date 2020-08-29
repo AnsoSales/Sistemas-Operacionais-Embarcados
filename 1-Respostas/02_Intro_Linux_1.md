@@ -25,104 +25,94 @@
 7. Apresente os respectivos comandos no terminal para:
 
   (a) Obter mais informações sobre um comando.
-  
-   	```
-	
+   	```bash
 	[comando] --help
 	
 	```
 	
   (b) Apresentar uma lista com os arquivos dentro de uma pasta.
-  
-  	```
+  	```bash
 	ls
 	```
 	
   (c) Apresentar o caminho completo da pasta.
-  
-	```
+	```bash
 	pwd
 	```
-	
+
   (d) Trocar de pasta.
-  
-  	```
+  	```bash
 	cd [caminho da pasta]
 	```
 	
   (e) Criar uma pasta.
-  
-  	```
+  	```bash
 	mkdir [nome da pasta]
 	```
 	
   (f) Apagar arquivos definitivamente.
-  
-  	```
+  	```bash
 	rm [arquivo]
 	```
 	
   (g) Apagar pastas definitivamente.
-  
-  	```
+  	```bash
 	rm -rf [pasta]
 	```
 	
   (h) Copiar arquivos.
-  
-  	```
+  	```bash
 	cp [arquivo] [destino]
 	```
   (i) Copiar pastas.
-  	```
+  	```bash
 	cp -r [pasta] [destino]
 	```
 	
   (j) Mover arquivos.
-  
-  	```
+  	```bash
 	mv [arquivo] [destino]
 	```
 	
   (k) Mover pastas.
   
-  	```
+  	```bash
 	mv -r [pasta] [destino]
 	```
 	
   (l) Renomear pastas.
-  	```
+  	```bash
 	mr [pasta] [mesmo diretório] [pasta]
 	```
   (m) Apresentar o conteúdo de um arquivo.
-  	```
+  	```bash
 	cat [arquivo]
 	```
   (n) Apresentar o tipo de um arquivo.
-	```
+	```bash
 	file [arquivo]
 	```
   (o) Limpar a tela do terminal.
-  	```
+  	```bash
 	clear
 	```
   (p) Encontrar ocorrências de palavras-chave em um arquivo-texto.
-  	```
+  	```bash
 	grep [palavra-chave] [arquivo.txt]
 	```
   (q) Ordenar informações em um arquivo-texto.
-  	```
+  	```bash
 	sort[arquivo.txt]
 	```
   (r) Substituir ocorrências de palavras-chave em um arquivo-texto.
-  	```
+  	```bash
 	sed -e 's/[nome1]/nome2/' [arquivo.txt]
 	```
   (s) Conferir se dois arquivos são iguais.
-  	```
+  	```bash
 	diff
 	```
   (t) Escrever algo na tela.
-  	```
+  	```bash
 	echo
 	```
