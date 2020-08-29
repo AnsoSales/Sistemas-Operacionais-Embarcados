@@ -1,19 +1,19 @@
 Para todas as questões, escreva os comandos correspondentes no terminal.
 
 1. Escreva o texto "Ola mundo cruel!" em um arquivo denominado "Ola_mundo.txt". Apresente o conteúdo deste arquivo no terminal.
-```bash
+```console
 $ echo "ola mundo cruel" > Ola_mundo.txt
 ```
 2. Apresente o nome de todos os arquivos e pastas na pasta 'root'.
-```bash
+```console
 $ ls -a
 ```
 3. Apresente o tipo de todos os arquivos e pastas na pasta 'root'.
-```bash
+```console
 $ ls *.*
 ```
 4. Apresente somente as pastas dentro da pasta 'root'.
-```bash
+```console
 $ ls -l -d */
 ```
 5. Descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
@@ -21,30 +21,30 @@ $ ls -l -d */
 Para as questões a seguir, use a pasta no endereço https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Questoes/02_Intro_Linux_arqs.zip
 
 6. Liste somente os arquivos com extensão .txt.
-```bash
+```console
 $ ls *.txt
 ```
 7. Liste somente os arquivos com extensão .png.
-```bash
+```console
 $ ls *.png
 ```
 8. Liste somente os arquivos com extensão .jpg.
-```bash
+```console
 $ ls *.jpg
 ```
 9. Liste somente os arquivos com extensão .gif.
-```bash
+```console
 $ ls *.gif
 ```
 10. Liste somente os arquivos que contenham o nome 'cal'.
-```bash
+```console
 $ ls cal*
 ```
 11. Liste somente os arquivos que contenham o nome 'tux'.
-```bash
+```console
 $ ls *tux*
 ```
 12. Liste somente os arquivos que comecem com o nome 'tux'.
-```bash
+```console
 $ ls *tux
 ```
